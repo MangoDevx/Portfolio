@@ -3,8 +3,9 @@ name: Deploy to Pi
 # trigger on pushes to main (or change to your default branch)
 on:
   push:
-    branches: [ main ]
-
+    branches:
+      - master
+    
 jobs:
   deploy:
     name: SSH & Deploy
