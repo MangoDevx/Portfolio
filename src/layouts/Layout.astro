@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar.astro";
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Primary Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keith's Portfolio</title>
@@ -13,7 +12,6 @@ import Navbar from "../components/Navbar.astro";
     <meta name="keywords" content="Keith, software engineering, photography, portfolio, C#, .NET, Git, Docker, Avalonia, Figma" />
     <meta name="author" content="Keith" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://keithrm.com/" />
     <meta property="og:site_name" content="Keith's Portfolio" />
@@ -22,7 +20,6 @@ import Navbar from "../components/Navbar.astro";
     <meta property="og:image" content="https://keithrm.com/og-image.png" />
     <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://keithrm.com/" />
     <meta name="twitter:title" content="Keith's Portfolio" />
@@ -30,15 +27,13 @@ import Navbar from "../components/Navbar.astro";
     <meta name="twitter:image" content="https://keithrm.com/og-image.png" />
     <meta name="twitter:site" content="@your_twitter_handle" />
 
-    <!-- Devicon Icon Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body class="flex flex-col min-h-screen dark">
     <Navbar />
     <main
-      class="flex-grow h-screen scroll-smooth dark:bg-[#121212]"
-    >
+      class="flex-grow h-screen scroll-smooth dark:bg-[#121212]">
       <slot />
     </main>
   </body>
