@@ -1,38 +1,54 @@
 ---
 ---
-<nav class="sticky top-0 z-50 bg-white dark:bg-[#121212] border-gray-200 dark:border-gray-700">
-  <ul class="flex gap-4 p-4 m-0 list-none">
-    <li>
-      <a
-        href="#top-section"
-        class="block px-4 py-2 font-medium text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-      >
-        Home
-      </a>
-    </li>
-    <li>
-      <a
-        href="#experience"
-        class="block px-4 py-2 font-medium text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-      >
-        Experience
-      </a>
-    </li>
-    <li>
-      <a
-        href="#skills"
-        class="block px-4 py-2 font-medium text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-      >
-        Skills/Education
-      </a>
-    </li>
-    <li>
-      <a
-        href="#gallery"
-        class="block px-4 py-2 font-medium text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-      >
-        Gallery
-      </a>
-    </li>
-  </ul>
+<!-- src/components/Navbar.astro -->
+
+<nav class="sticky top-0 z-50 bg-white dark:bg-[#121212] border-gray-200 dark:border-gray-700 py-2 sm:py-4">
+  <div class="w-full px-4 sm:px-6 flex items-center justify-start">
+    <!-- Mobile menu button -->
+    <button
+      id="nav-toggle"
+      class="sm:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
+      aria-label="Toggle navigation"
+    >
+      <!-- Hamburger icon -->
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Navigation links -->
+    <ul
+      id="nav-menu"
+      class="hidden sm:flex gap-4 p-4 sm:p-0 list-none"
+    >
+      <li>
+        <a href="#top-section" class="block px-4 py-2 font-medium text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#experience" class="block px-4 py-2 font-medium text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded">
+          Experience
+        </a>
+      </li>
+      <li>
+        <a href="#skills" class="block px-4 py-2 font-medium text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded">
+          Skills/Education
+        </a>
+      </li>
+      <li>
+        <a href="#gallery" class="block px-4 py-2 font-medium text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded">
+          Gallery
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<script type="module">
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>

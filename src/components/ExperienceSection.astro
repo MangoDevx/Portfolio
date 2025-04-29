@@ -7,26 +7,26 @@ import SRTLogo from "../assets/SRTLogo.jpg";
 
 <section
   id="experience"
-  class="snap-start h-screen [scroll-snap-stop:always] flex items-center justify-center"
+  class="snap-start min-h-screen [scroll-snap-stop:always] flex items-center justify-center py-8"
 >
-  <div class="max-w-6xl w-full px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-5xl font-extrabold text-gradient-smooth animate-glow">
-              Experience
-          </h2>
-          <p class="mt-4 text-gray-600 dark:text-gray-400">
-              A snapshot of my professional journey
-          </p>
-      </div>
+  <div class="max-w-6xl w-full px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-gradient-smooth animate-glow">
+        Experience
+      </h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-400">
+        A snapshot of my professional journey
+      </p>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch w-full">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 w-full">
       <div class="experience-card h-full">
         <ExperienceCard
           logoSrc={EatonLogo.src}
           name="Eaton"
           position="Software Engineer"
           link="https://www.eaton.com/us/en-us.html"
-          dates="January 2024 - Present"
+          dates="January 2024 – Present"
           description={`
             <ul class="list-disc list-inside space-y-2 text-gray-200">
               <li>Created thousands of USD in savings per device (~$100k per facility)</li>
@@ -35,11 +35,9 @@ import SRTLogo from "../assets/SRTLogo.jpg";
             </ul>
           `}
           class={`
-            h-full
-            group hover:scale-105 transition-transform duration-300
+            h-full group hover:scale-105 transition-transform duration-300
             bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8
-            shadow-lg hover:shadow-2xl
-            transform hover:scale-105 hover:-rotate-1
+            shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-rotate-1
             flex flex-col justify-between
           `}
         />
@@ -51,7 +49,7 @@ import SRTLogo from "../assets/SRTLogo.jpg";
           name="SR Technologies (DoD Contracting)"
           position="Software Dev Intern"
           link="https://bluehalo.com/sr-technologies-is-now-bluehalo/"
-          dates="2023 - 2023"
+          dates="2023 – 2023"
           description={`
             <ul class="list-disc list-inside space-y-2 text-gray-200">
               <li>Created a platform to replay captured data</li>
@@ -61,11 +59,9 @@ import SRTLogo from "../assets/SRTLogo.jpg";
             </ul>
           `}
           class={`
-            h-full
-            group hover:scale-105 transition-transform duration-300
+            h-full group hover:scale-105 transition-transform duration-300
             bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8
-            shadow-lg hover:shadow-2xl
-            transform hover:scale-105 hover:-rotate-1
+            shadow-lg hover:shadow-2xl transform hover:scale-105 hover:-rotate-1
             flex flex-col justify-between
           `}
         />

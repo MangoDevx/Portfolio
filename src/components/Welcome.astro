@@ -4,55 +4,56 @@ import "../styles/global.css";
 ---
 
 <main class="dark:text-white">
-	<section
-		id="top-section"
-		class="snap-start h-screen [scroll-snap-stop:always]
-         relative flex items-center justify-start overflow-hidden"
-	>
-		<div class="absolute inset-0">
-			<img
-				src={background.src}
-				alt="Mountain landscape"
-				class="w-full h-full object-cover"
-			/>
-			<div class="absolute inset-0 bg-black/30"></div>
-		</div>
+  <section
+    id="top-section"
+    class="snap-start min-h-screen [scroll-snap-stop:always]
+           relative flex items-center justify-start overflow-hidden"
+  >
+    <div class="absolute inset-0">
+      <img
+        src={background.src}
+        alt="Mountain landscape"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
 
-		<div
-			class="w-full max-w-3xl p-8 bg-black/10 backdrop-blur-sm rounded-2xl ml-20"
-		>
-			<h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
-				Hey, I&#39;m <span class="text-blue-300">Keith!</span>
-			</h1>
-			<h2 class="text-xl md:text-2xl font-medium mb-8 text-gray-100">
-				Floridian Software Developer & Photographer with experience in
-				DoD Contract Software & Electrical Manufacturing Software.<br
-				/><br />
-				I&#39;m a photographer who loves traveling and capturing new places.
-				I hit the gym regularly and spend my free time hanging out with my
-				dog, Jax. I grew up surfing-so the beach is home-and I&#39;ve always
-				had an affinity for computers and tech.
-			</h2>
+    <div
+      class="w-full max-w-3xl p-8 bg-black/10 backdrop-blur-sm rounded-2xl
+             ml-4 sm:ml-20"
+    >
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+        Hey, I’m <span class="text-blue-300">Keith!</span>
+      </h1>
+      <h2 class="text-lg md:text-2xl font-medium mb-8 text-gray-100">
+        Floridian Software Developer & Photographer with experience in
+        DoD Contract Software & Electrical Manufacturing Software.<br /><br />
+        I’m a photographer who loves traveling and capturing new places.
+        I hit the gym regularly and spend my free time hanging out with my
+        dog, Jax. I grew up surfing—so the beach is home—and I’ve always
+        had an affinity for computers and tech.
+      </h2>
 
-			<div class="flex flex-col sm:flex-row gap-4">
-				<a
-					class="px-6 py-3 bg-blue-600/90 hover:bg-blue-700 text-white rounded-lg font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 backdrop-blur-sm"
-					href="#experience"
-				>
-					Experience
-				</a>
-				<a
-					class="px-6 py-3 bg-blue-400/90 hover:bg-blue-400 text-white rounded-lg font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 backdrop-blur-sm"
-					href="#skills"
-				>
-					Skills/Education
-				</a>
-				<a
-					class="px-6 py-3 bg-blue-300/90 hover:bg-blue-300 text-white rounded-lg font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-400/25 backdrop-blur-sm"
-				>
-					Photography
-				</a>
-			</div>
-		</div>
-	</section>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="#experience"
+          class="w-full sm:w-auto px-6 py-3 bg-blue-600/90 hover:bg-blue-700 text-white rounded-lg font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 backdrop-blur-sm"
+        >
+          Experience
+        </a>
+        <a
+          href="#skills"
+          class="w-full sm:w-auto px-6 py-3 bg-blue-400/90 hover:bg-blue-400 text-white rounded-lg font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 backdrop-blur-sm"
+        >
+          Skills/Education
+        </a>
+        <a
+          href="#gallery"
+          class="w-full sm:w-auto px-6 py-3 bg-blue-300/90 hover:bg-blue-300 text-white rounded-lg font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-400/25 backdrop-blur-sm"
+        >
+          Photography
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
