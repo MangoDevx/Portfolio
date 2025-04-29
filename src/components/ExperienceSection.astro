@@ -1,0 +1,54 @@
+---
+import ExperienceCard from './ExperienceCard.astro'; // adjust path if needed
+import EatonLogo from '../assets/eatonlogo.png';    // or wherever your logos live
+import SRTLogo from '../assets/SRTLogo.jpg';
+---
+
+<section id="experience" class="py-16">
+  <div class="container mx-auto px-4">
+    <h2
+      class="
+        text-4xl font-extrabold text-white
+        mb-12
+        inline-block
+        relative
+      "
+    >
+      Experience &amp; Education
+    </h2>
+
+    <!-- Vertically stacked, evenly spaced -->
+    <div class="flex flex-col gap-8">
+      <ExperienceCard
+        logoSrc={EatonLogo.src}
+        position="Software Engineer"
+        description={`
+          <ul class="list-disc list-inside space-y-1">
+            <li>Created thousands of USD in savings per device (~$100k per facility)</li>
+            <li>Increased manufacturing & operator productivity</li>
+            <li>Increased manufacturing & operator efficiency</li>
+          </ul>
+        `}
+        name="Eaton"
+        link="https://www.eaton.com/us/en-us.html"
+        dates="January 2024 – Present"
+      />
+
+      <ExperienceCard
+        logoSrc={SRTLogo.src}
+        position="Software Dev Intern"
+        description={`
+          <ul class="list-disc list-inside space-y-1">
+            <li>Created a platform to replay captured data</li>
+            <li>Created a remote web interface for playback features</li>
+            <li>Created a GRPC server to handle transferring secure packets</li>
+            <li>Presented in front of company, earned a challenge coin</li>
+          </ul>
+        `}
+        name="SR Technologies (DoD Contracting)"
+        link="https://bluehalo.com/sr-technologies-is-now-bluehalo/"
+        dates="2023 – 2023"
+      />
+    </div>
+  </div>
+</section>
