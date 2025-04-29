@@ -3,14 +3,15 @@ import "../styles/global.css";
 import ExperienceCard from "./ExperienceCard.astro";
 import flsouthernLogo from "../assets/fsclogo.jpg";
 import easternFloridaLogo from "../assets/efsclogo.jpg";
+import avaloniaLogo from "../assets/avalonia.svg";
 
 const skills = [
-  { name: "C#",       iconClass: "devicon-csharp-plain colored"      },
-  { name: ".NET",     iconClass: "devicon-dotnetcore-plain colored"  },
-  { name: "Git",      iconClass: "devicon-git-plain colored"         },
-  { name: "Docker",   iconClass: "devicon-docker-plain colored"      },
-  { name: "Avalonia", iconSrc: "/src/assets/avalonia.svg"    },
-  { name: "Figma",    iconClass: "devicon-figma-plain colored"       },
+  { name: "C#", iconClass: "devicon-csharp-plain colored" },
+  { name: ".NET", iconClass: "devicon-dotnetcore-plain colored" },
+  { name: "Git", iconClass: "devicon-git-plain colored" },
+  { name: "Docker", iconClass: "devicon-docker-plain colored" },
+  { name: "Avalonia", iconSrc: avaloniaLogo.src },
+  { name: "Figma", iconClass: "devicon-figma-plain colored" },
 ];
 ---
 
@@ -20,7 +21,9 @@ const skills = [
 >
   <div class="max-w-6xl w-full px-4 sm:px-6">
     <div class="text-center mb-12">
-      <h2 class="text-4xl sm:text-5xl font-extrabold text-gradient-smooth animate-glow">
+      <h2
+        class="text-4xl sm:text-5xl font-extrabold text-gradient-smooth animate-glow"
+      >
         Education & Skills
       </h2>
       <p class="mt-4 text-gray-600 dark:text-gray-400">
@@ -75,28 +78,32 @@ const skills = [
       </h3>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-6">
-      {skills.map((skill) => (
-        <div
-          class="
+    <div
+      class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-6"
+    >
+      {
+        skills.map((skill) => (
+          <div
+            class="
             flex flex-col items-center justify-center
             p-4 bg-white/10 dark:bg-white/5 backdrop-blur-sm
             rounded-2xl hover:scale-105 transition-transform
             duration-200 shadow-lg hover:shadow-2xl
           "
-        >
-          {skill.iconClass ? (
-            <i class={`${skill.iconClass} text-4xl`} />
-          ) : (
-            <img
-              src={skill.iconSrc}
-              alt={`${skill.name} icon`}
-              class="h-10 w-10 object-contain"
-            />
-          )}
-          <span class="mt-2 font-medium text-gray-100">{skill.name}</span>
-        </div>
-      ))}
+          >
+            {skill.iconClass ? (
+              <i class={`${skill.iconClass} text-4xl`} />
+            ) : (
+              <img
+                src={skill.iconSrc}
+                alt={`${skill.name} icon`}
+                class="h-10 w-10 object-contain"
+              />
+            )}
+            <span class="mt-2 font-medium text-gray-100">{skill.name}</span>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
