@@ -1,53 +1,92 @@
 ---
-import ExperienceCard from './ExperienceCard.astro';
-import EatonLogo from '../assets/eatonlogo.png';
-import SRTLogo from '../assets/SRTLogo.jpg';
+import "../styles/global.css";
+import ExperienceCard from "./ExperienceCard.astro";
+import EatonLogo from "../assets/eatonlogo.png";
+import SRTLogo from "../assets/SRTLogo.jpg";
 ---
 
-<section id="experience" class="py-16">
-  <div class="container mx-auto px-4">
-    <h2
-      class="
-        text-4xl font-extrabold text-white
-        mb-12
-        inline-block
-        relative
-      "
-    >
-      Experience
-    </h2>
+<section
+  id="experience"
+  class="snap-start h-screen [scroll-snap-stop:always] flex items-center justify-center"
+>
+  <div class="max-w-6xl w-full px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-5xl font-extrabold text-gradient-smooth animate-glow">
+              Experience
+          </h2>
+          <p class="mt-4 text-gray-600 dark:text-gray-400">
+              A snapshot of my professional journey
+          </p>
+      </div>
 
-    <div class="flex flex-col gap-8">
-      <ExperienceCard
-        logoSrc={EatonLogo.src}
-        position="Software Engineer"
-        description={`
-          <ul class="list-disc list-inside space-y-1">
-            <li>Created thousands of USD in savings per device (~$100k per facility)</li>
-            <li>Increased manufacturing & operator productivity</li>
-            <li>Increased manufacturing & operator efficiency</li>
-          </ul>
-        `}
-        name="Eaton"
-        link="https://www.eaton.com/us/en-us.html"
-        dates="January 2024 – Present"
-      />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch w-full">
+      <div class="experience-card h-full">
+        <ExperienceCard
+          logoSrc={EatonLogo.src}
+          name="Eaton"
+          position="Software Engineer"
+          link="https://www.eaton.com/us/en-us.html"
+          dates="January 2024 - Present"
+          description={`
+            <ul class="list-disc list-inside space-y-2 text-gray-200">
+              <li>Created thousands of USD in savings per device (~$100k per facility)</li>
+              <li>Increased manufacturing & operator productivity</li>
+              <li>Improved manufacturing & operator efficiency</li>
+            </ul>
+          `}
+          class={`
+            h-full
+            group hover:scale-105 transition-transform duration-300
+            bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8
+            shadow-lg hover:shadow-2xl
+            transform hover:scale-105 hover:-rotate-1
+            flex flex-col justify-between
+          `}
+        />
+      </div>
 
-      <ExperienceCard
-        logoSrc={SRTLogo.src}
-        position="Software Dev Intern"
-        description={`
-          <ul class="list-disc list-inside space-y-1">
-            <li>Created a platform to replay captured data</li>
-            <li>Created a remote web interface for playback features</li>
-            <li>Created a GRPC server to handle transferring secure packets</li>
-            <li>Presented in front of company, earned a challenge coin</li>
-          </ul>
-        `}
-        name="SR Technologies (DoD Contracting)"
-        link="https://bluehalo.com/sr-technologies-is-now-bluehalo/"
-        dates="2023 – 2023"
-      />
+      <div class="experience-card h-full">
+        <ExperienceCard
+          logoSrc={SRTLogo.src}
+          name="SR Technologies (DoD Contracting)"
+          position="Software Dev Intern"
+          link="https://bluehalo.com/sr-technologies-is-now-bluehalo/"
+          dates="2023 - 2023"
+          description={`
+            <ul class="list-disc list-inside space-y-2 text-gray-200">
+              <li>Created a platform to replay captured data</li>
+              <li>Built a remote web interface for playback features</li>
+              <li>Authored a gRPC server for secure packet transfer</li>
+              <li>Presented in front of the company and earned a challenge coin</li>
+            </ul>
+          `}
+          class={`
+            h-full
+            group hover:scale-105 transition-transform duration-300
+            bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8
+            shadow-lg hover:shadow-2xl
+            transform hover:scale-105 hover:-rotate-1
+            flex flex-col justify-between
+          `}
+        />
+      </div>
     </div>
   </div>
 </section>
+
+<script type="module">
+  const options = { threshold: 0.5 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  }, options);
+
+  document.querySelectorAll(".experience-card").forEach((el) => {
+    observer.observe(el);
+  });
+</script>

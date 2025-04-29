@@ -8,19 +8,17 @@ import Navbar from "../components/Navbar.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
     <meta name="generator" content={Astro.generator} />
     <title>Keith's Website</title>
   </head>
   <body class="flex flex-col min-h-screen dark">
     <Navbar />
-    <main class="flex-grow dark:bg-[#121212]">
-      <slot/>
+    <main
+      class="flex-grow h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth
+             dark:bg-[#121212]"
+    >
+      <slot />
     </main>
   </body>
 </html>
-
-<style>
-  html,
-  body {
-  }
-</style>
