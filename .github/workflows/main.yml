@@ -1,0 +1,27 @@
+name: Deploy to Pi
+
+# trigger on pushes to main (or change to your default branch)
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    name: SSH & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.8.1
+        with:
+          ssh-private-key: ${{ secrets.PI_SSH_KEY }}
+
+      - name: Deploy to Pi
+        run: |
+          ssh -o StrictHostKeyChecking=no \
+              -p ${{ secrets.PI_SSH_PORT }} \
+              ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} \
+              'cd ~/portfolio-src && ./deploy.sh'
