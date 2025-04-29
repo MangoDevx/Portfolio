@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 ---
 
@@ -8,32 +9,44 @@ import Navbar from "../components/Navbar.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keith's Portfolio</title>
-    <meta name="description" content="Keith's personal portfolio showcasing experience in software engineering, photography, and technical skills." />
-    <meta name="keywords" content="Keith, software engineering, photography, portfolio, C#, .NET, Git, Docker, Avalonia, Figma" />
+    <meta
+      name="description"
+      content="Keith's personal portfolio showcasing experience in software engineering, photography, and technical skills."
+    />
+    <meta
+      name="keywords"
+      content="Keith, software engineering, photography, portfolio, C#, .NET, Git, Docker, Avalonia, Figma"
+    />
     <meta name="author" content="Keith" />
-
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://keithrm.com/" />
     <meta property="og:site_name" content="Keith's Portfolio" />
     <meta property="og:title" content="Keith's Portfolio" />
-    <meta property="og:description" content="Explore Keith's projects, work experience, and technical skills." />
+    <meta
+      property="og:description"
+      content="Explore Keith's projects, work experience, and technical skills."
+    />
     <meta property="og:image" content="https://keithrm.com/og-image.png" />
     <meta property="og:locale" content="en_US" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://keithrm.com/" />
     <meta name="twitter:title" content="Keith's Portfolio" />
-    <meta name="twitter:description" content="Explore Keith's projects, work experience, and technical skills." />
+    <meta
+      name="twitter:description"
+      content="Explore Keith's projects, work experience, and technical skills."
+    />
     <meta name="twitter:image" content="https://keithrm.com/og-image.png" />
-    <meta name="twitter:site" content="@your_twitter_handle" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body class="flex flex-col min-h-screen dark">
+  <body
+    class="flex flex-col min-h-screen dark:bg-[#121212] text-gray-800 dark:text-gray-200"
+  >
     <Navbar />
-    <main
-      class="flex-grow h-screen scroll-smooth dark:bg-[#121212]">
+    <main class="flex-grow h-screen overflow-y-scroll scroll-smooth">
       <slot />
     </main>
   </body>

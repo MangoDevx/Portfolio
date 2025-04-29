@@ -8,7 +8,6 @@ interface Props {
   dates: string;
   class?: string;
 }
-
 const {
   logoSrc,
   name,
@@ -24,14 +23,7 @@ const {
   href={link}
   target="_blank"
   rel="noopener noreferrer"
-  class={`
-    block rounded-xl overflow-hidden transition-shadow
-    bg-white dark:bg-gray-800
-    border border-gray-200 dark:border-gray-700
-    shadow-md dark:shadow-none
-    hover:shadow-lg dark:hover:shadow-lg
-    ${extraClass}
-  `}
+  class={`block rounded-xl overflow-hidden transition-shadow bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg ${extraClass}`}
 >
   <div class="p-6 flex flex-col space-y-4">
     <div class="flex items-center space-x-4">
@@ -40,23 +32,19 @@ const {
         alt={`${name} logo`}
         class="h-16 w-16 object-contain"
       />
-      <div class="flex flex-col">
+      <div>
         <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">
           {name}
         </h3>
         <p class="text-base font-medium text-gray-700 dark:text-gray-300">
           {position}
         </p>
-        <p class="text-sm text-gray-500 dark:text-gray-500">
-          {dates}
-        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-500">{dates}</p>
       </div>
     </div>
-
     <hr class="border-gray-200 dark:border-gray-700" />
-
     <div
-      class="text-gray-600 dark:text-gray-400 space-y-2"
+      class="text-gray-700 dark:text-gray-300 space-y-2"
       set:html={description}
     />
   </div>

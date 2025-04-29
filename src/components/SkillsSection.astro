@@ -15,10 +15,7 @@ const skills = [
 ];
 ---
 
-<section
-  id="skills"
-  class="py-15 flex flex-col items-center justify-center bg-gray-50 dark:bg-[#1a1a1a]"
->
+<section id="skills" class="py-15 flex flex-col items-center justify-center">
   <div class="max-w-6xl w-full px-4 sm:px-6">
     <div class="text-center mb-12">
       <h2
@@ -37,9 +34,9 @@ const skills = [
         name="Florida Southern College"
         position="B.S. in Computer Science"
         link="https://www.flsouthern.edu/"
-        dates="2021 – 2023"
+        dates="2021 &#8211; 2023"
         description={`
-          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <ul class="list-disc list-inside space-y-2 ">
             <li>Graduated Cum Laude</li>
             <li>Major coursework: Data Structures, Algorithms, Databases, Software Engineering</li>
             <li>Senior project: Real-time location based group chats</li>
@@ -57,11 +54,11 @@ const skills = [
         name="Eastern Florida State College"
         position="Associates of Arts"
         link="https://www.easternflorida.edu/"
-        dates="2019 – 2021"
+        dates="2019 &#8211; 2021"
         description={`
-          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <ul class="list-disc list-inside space-y-2">
             <li>General education courses</li>
-            <li>Consistent Dean’s list recipient</li>
+            <li>Consistent Dean&#39;s list recipient</li>
           </ul>
         `}
         class={`
@@ -72,10 +69,8 @@ const skills = [
       />
     </div>
 
-    <div class="text-center mb-6">
-      <h3 class="text-3xl font-semibold text-gray-800 dark:text-gray-200">
-        Technical Skills
-      </h3>
+    <div class="text-center mb-10 pt-10">
+      <h3 class="text-3xl font-semibold">Technical Skills</h3>
     </div>
 
     <div
@@ -100,10 +95,12 @@ const skills = [
                 class="h-10 w-10 object-contain"
               />
             )}
-            <span class="mt-2 font-medium text-gray-100">{skill.name}</span>
+            <span class="mt-2 font-medium">{skill.name}</span>
           </div>
         ))
       }
     </div>
   </div>
+
+  <div class="py-20"></div>
 </section>
